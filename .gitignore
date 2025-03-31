@@ -62,3 +62,6 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Ignore posture_detect.py
+backend/posture_detect.py
