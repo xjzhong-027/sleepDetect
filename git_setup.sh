@@ -116,7 +116,12 @@ git commit -m "Initial commit: Sleep detection project with Vue.js frontend and 
 # 添加远程仓库
 git remote add origin git@github.com:xjzhong-027/sleepDetect.git || git remote set-url origin git@github.com:xjzhong-027/sleepDetect.git
 
+# 拉取远程仓库内容
+echo "拉取远程仓库内容..."
+git pull origin master --allow-unrelated-histories
+
 # 推送到主分支
-git push -u origin main || git push -u origin master
+echo "推送到远程仓库..."
+git push -u origin master
 
 echo "项目已成功推送到 GitHub！" 
