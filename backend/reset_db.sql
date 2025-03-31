@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS sleep_app;
+CREATE DATABASE sleep_app CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci; 

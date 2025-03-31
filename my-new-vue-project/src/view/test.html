@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Example</title>
+    <script src="https://unpkg.com/vue"></script>
+    <style>
+        .counter {
+            width: 2em;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="decrement">-</button>
+        <input @change="check_range" type="text" class="counter" v-model="counter">
+        <button @click='increase':title="parseInt(counter)+1">+</button>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    counter: 0,
+                    minCount: 0,
+                    maxCount: 10
+                }
+            },
+            methods: {
+                decrement() {
+                    if (this.counter >this.minCount) {
+                        this.counter--;
+                    }
+                },
+                increase(){
+                    if (this.counter<this.maxCount){
+                        this.counter++;
+                    }
+                },
+                check_range(){
+                    if(this.counter<this.minCount | this.counter>this.maxCount){
+                        this.counter=this.minCount;                    }
+                    if(isNaN(this.counter) )
+                        this.counter=this.minCount;
+                }
+            }
+        });
+        app.mount("#app")
+    </script>
+</body>
+
+</html>
