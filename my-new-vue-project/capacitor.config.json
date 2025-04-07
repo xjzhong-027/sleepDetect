@@ -1,0 +1,25 @@
+{
+  "appId": "com.example.mynewvueproject",
+  "appName": "智享眠境",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": true,
+    "loggingEnabled": true
+  },
+  "plugins": {
+    "Camera": {
+      "camera": {
+        "presentationStyle": "fullscreen"
+      }
+    },
+    "Permissions": {
+      "permissions": [
+        "camera",
+        "microphone"
+      ]
+    }
+  }
+}
